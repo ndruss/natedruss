@@ -39,3 +39,15 @@ a {
   text-indent: -9999px;
   font-size: 1px;
 }
+
+
+.main-content {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.tile {
+  min-height: 200px;
+  margin-bottom: 1em;
+  background: #DDD;
+}

@@ -1,8 +1,11 @@
 .header {
+  background: white;
   padding-top: .5em;
   padding-bottom: .5em;
   border-bottom: solid 1px var(--color-gray-light);
   height: var(--header-height);
+  position: sticky;
+  top: 0;
 }
 
 .header > div {
