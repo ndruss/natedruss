@@ -7,7 +7,7 @@ export default () => (
     <nav>
       <ul>
         <li><Link to="/">Work</Link></li>
-        <li><Link to="info">Info</Link></li>
+        <li><Link to="/info">Info</Link></li>
       </ul>
     </nav>
   </header>
