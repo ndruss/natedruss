@@ -1,3 +1,41 @@
+:root {
+  --color-blue: #10295b;
+  --color-blue-light: #4290bb;
+  --color-gray-light: #CCC;
+  --color-gray-medium: #a4a4a4;
+  --color-gray-dark: #444444;
+  --header-height: 47px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-family: sans-serif;
+  line-height: 1.5;
+  color: var(--color-gray-dark);
+}
+
+body {
+  margin: 0;
+}
+
+.contain {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: var(--color-blue-light);
+  text-decoration: none;
+}
+
+.screen-reader-text {
+  position: absolute;
+  text-indent: -9999px;
+  font-size: 1px;
 }

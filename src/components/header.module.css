@@ -1,3 +1,46 @@
 .header {
-  border: solid 1px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border-bottom: solid 1px var(--color-gray-light);
+  height: var(--header-height);
+}
+
+.header > div {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.logo {
+  /* background-color: var(--color-blue); */
+}
+
+.logo a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-blue);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: inline-block;
+}
+
+.listItem + .listItem::before {
+  content: '/';
+  color: var(--color-gray-medium);
+  display: inline-block;
+  padding: 0 0.5em;
+}
+
+.listItem a {
+    color: var(--color-blue);
 }
