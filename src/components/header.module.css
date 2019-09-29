@@ -1,8 +1,8 @@
 .header {
-  background: white;
+  background: #eee;
   padding-top: .5em;
   padding-bottom: .5em;
-  border-bottom: solid 1px var(--color-gray-light);
+  border-bottom: solid 1px var(--color-blue);
   height: var(--header-height);
   position: sticky;
   top: 0;
@@ -12,7 +12,7 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .logo {
@@ -24,7 +24,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: var(--color-blue);
+  border: solid 1px var(--color-blue);
 }
 
 .list {
@@ -39,11 +39,16 @@
 
 .listItem + .listItem::before {
   content: '/';
-  color: var(--color-gray-medium);
+  /* color: var(--color-gray-medium); */
   display: inline-block;
   padding: 0 0.5em;
 }
 
 .listItem a {
-    color: var(--color-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+.listItem a:hover {
+  color: white;
+  background-color: var(--color-blue);
 }

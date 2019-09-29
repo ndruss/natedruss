@@ -1,5 +1,5 @@
 :root {
-  --color-blue: #10295b;
+  --color-blue: #0642d5;
   --color-blue-light: #4290bb;
   --color-gray-light: #CCC;
   --color-gray-medium: #a4a4a4;
@@ -13,26 +13,30 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Source Code Pro', monospace;
-  font-weight: 300;
-  line-height: 1.5;
-  color: var(--color-gray-dark);
-}
-
 body {
   margin: 0;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-blue);
+  background: #eee;
 }
 
 .contain {
   width: 90%;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
 a {
-  color: var(--color-blue-light);
-  text-decoration: none;
+  color: var(--color-blue);
+}
+
+a:hover {
+  color: white;
+  background-color: var(--color-blue);
 }
 
 .screen-reader-text {
@@ -50,5 +54,5 @@ a {
 .tile {
   min-height: 200px;
   margin-bottom: 1em;
-  background: #DDD;
+  border: solid 1px;
 }
