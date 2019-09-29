@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import Head from "../components/head"
 import Intro from "../components/site-intro"
 
 const Tile = () => (
@@ -8,6 +9,7 @@ const Tile = () => (
 
 export default () => (
   <>
+    <Head title="Home" />
     <Intro />
     <Layout>
       <div id="work" className="contain">
