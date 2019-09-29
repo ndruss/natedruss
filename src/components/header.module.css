@@ -1,8 +1,8 @@
 .header {
-  background: #eee;
+  background: var(--color-background);
   padding-top: .5em;
   padding-bottom: .5em;
-  border-bottom: solid 1px var(--color-blue);
+  border-bottom: solid 1px var(--color-foreground);
   height: var(--header-height);
   position: sticky;
   top: 0;
@@ -47,8 +47,4 @@
 .listItem a {
   font-weight: 700;
   text-decoration: none;
-}
-.listItem a:hover {
-  color: white;
-  background-color: var(--color-blue);
 }

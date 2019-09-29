@@ -1,10 +1,20 @@
 :root {
   --color-blue: #0642d5;
   --color-blue-light: #4290bb;
-  --color-gray-light: #CCC;
-  --color-gray-medium: #a4a4a4;
-  --color-gray-dark: #444444;
-  --header-height: 47px;
+  --color-blue-dark: #070e21;
+  --color-gray-extralight: #d1d6df;
+  --color-gray-light: #a1a5ad;
+  --color-gray-dark: #1c1d1f;
+
+  --header-height: 50px;
+
+  --color-background: var(--color-gray-extralight);
+  --color-foreground: var(--color-blue);
+
+  --color-background: var(--color-gray-dark);
+  --color-foreground: var(--color-gray-extralight);
+
+  --color-blue: #42babb;
 }
 
 *,
@@ -19,15 +29,21 @@ body {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.6;
-  color: var(--color-blue);
-  background: #eee;
+  color: var(--color-foreground);
+  background: var(--color-background);
 }
 
-.contain {
-  width: 90%;
-  max-width: 800px;
+.container {
+  /* width: 90%; */
+  max-width: 600px;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
   margin-left: auto;
   margin-right: auto;
+}
+
+.container--wide {
+  max-width: none;
 }
 
 a {
@@ -35,7 +51,7 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: var(--color-background);
   background-color: var(--color-blue);
 }
 
@@ -44,7 +60,6 @@ a:hover {
   text-indent: -9999px;
   font-size: 1px;
 }
-
 
 .main-content {
   padding-top: 1em;
