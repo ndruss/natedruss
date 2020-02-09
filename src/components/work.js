@@ -1,12 +1,5 @@
 import React from "react"
-
-const Tile = props => (
-  <div className="tile">
-    <h2>{props.title}</h2>
-    <h3>{props.description}</h3>
-    <div>{props.content}</div>
-  </div>
-)
+import { Tile } from "./Tile"
 
 export default () => (
   <div id="work" className="container">

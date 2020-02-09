@@ -68,6 +68,7 @@ a:hover {
 
 .tile {
   min-height: 200px;
-  margin-bottom: 1em;
+  padding: 1em;
   border: solid 1px;
+  margin-bottom: 1em;
 }
