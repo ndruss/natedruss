@@ -3,7 +3,10 @@ import { Tile } from "./Tile"
 
 export default () => (
   <div id="work" className="container">
-    <p>This is the main content of my home page. Here, you will find a list of recent projects and maybe some links.</p>
+    <p>
+      This is the main content of my home page. Here, you will find a list of
+      recent projects and maybe some links.
+    </p>
 
     <Tile
       title="My Project"
