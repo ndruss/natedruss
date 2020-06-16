@@ -34,7 +34,6 @@ body {
 }
 
 .container {
-  /* width: 90%; */
   max-width: 600px;
   padding-left: 1.25em;
   padding-right: 1.25em;
@@ -62,6 +61,7 @@ a:hover {
 }
 
 .main-content {
+  min-height: 50vh;
   padding-top: 1em;
   padding-bottom: 1em;
 }

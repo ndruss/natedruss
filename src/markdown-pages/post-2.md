@@ -1,7 +1,7 @@
 ---
-slug: "/blog/my-first-post"
-date: "2019-05-04"
-title: "My first blog post"
+slug: "/blog/another-cool-post"
+date: "2020-06-16"
+title: "Another cool post"
 ---
 
 ## It’s gonna be great
