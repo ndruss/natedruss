@@ -27,10 +27,17 @@ body {
 
 .container {
   max-width: 600px;
-  padding-left: 1.25em;
-  padding-right: 1.25em;
+  padding-left: 1em;
+  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 600px) {
+  .container {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
 }
 
 .container--wide {
