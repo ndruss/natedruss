@@ -1,20 +1,12 @@
 :root {
-  --color-blue: #0642d5;
-  --color-blue-light: #4290bb;
-  --color-blue-dark: #070e21;
+  --color-blue: #42babb;
   --color-gray-extralight: #d1d6df;
   --color-gray-light: #a1a5ad;
   --color-gray-dark: #1c1d1f;
-
-  --header-height: 50px;
-
-  --color-background: var(--color-gray-extralight);
-  --color-foreground: var(--color-blue);
-
   --color-background: var(--color-gray-dark);
   --color-foreground: var(--color-gray-extralight);
-
-  --color-blue: #42babb;
+ 
+  --header-height: 50px;
 }
 
 *,

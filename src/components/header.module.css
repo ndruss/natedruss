@@ -15,10 +15,6 @@
   align-items: center;
 }
 
-.logo {
-  /* background-color: var(--color-blue); */
-}
-
 .logo a {
   display: block;
   width: 30px;
@@ -39,7 +35,6 @@
 
 .listItem + .listItem::before {
   content: '/';
-  /* color: var(--color-gray-medium); */
   display: inline-block;
   padding: 0 0.5em;
 }
