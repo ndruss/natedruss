@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import Intro from "../components/site-intro"
-import PostLink from "../components/post-link"
+import ProjectLink from "../components/project-link"
 
 export default ({
   data: {
@@ -11,7 +11,7 @@ export default ({
   }
 }) => {
   const Posts = edges
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .map(edge => <ProjectLink key={edge.node.id} post={edge.node} />)
 
   return (
     <>

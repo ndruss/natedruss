@@ -1,7 +1,7 @@
 ---
-slug: "/blog/another-cool-post"
+slug: "/work/progressive-annual-report"
 date: "2020-06-16"
-title: "Another cool post"
+title: "Progressive Annual Report"
 ---
 
 ## It’s gonna be great

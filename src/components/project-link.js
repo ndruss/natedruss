@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const PostLink = ({ post }) => (
+const ProjectLink = ({ post }) => (
   <li>
     <Link to={post.frontmatter.slug}>
       {post.frontmatter.title} ({post.frontmatter.date})
@@ -9,4 +9,4 @@ const PostLink = ({ post }) => (
   </li>
 )
 
-export default PostLink
+export default ProjectLink

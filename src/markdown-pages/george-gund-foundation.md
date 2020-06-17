@@ -1,7 +1,7 @@
 ---
-slug: "/blog/my-first-post"
+slug: "/work/george-gund-foundation"
 date: "2019-05-04"
-title: "My first blog post"
+title: "George Gund Foundation"
 ---
 
 ## It’s gonna be great
