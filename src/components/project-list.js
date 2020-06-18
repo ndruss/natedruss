@@ -1,18 +1,21 @@
 import React from "react"
 
-const ProjectLink = ({ post }) => (
-  <li className="project-link">
-    <a href={post.frontmatter.slug}>
-      <img
-        className="project-link__img"
-        src={post.frontmatter.thumbnailImg}
-      />
-      <span className="project-link__title">
-        {post.frontmatter.title}
-      </span>
-    </a>
-  </li>
-)
+const ProjectLink = ({ post }) => {
+  const tags = post.frontmatter.tags;
+  return (
+    <li className="project-link">
+      <a href={post.frontmatter.slug}>
+        <img
+          className="project-link__img"
+          src={post.frontmatter.thumbnailImg}
+        />
+        <span className="project-link__title">
+          {post.frontmatter.title}
+        </span>
+      </a>
+    </li>
+  )
+}
 
 const ProjectList = ({ data }) => {
   const Posts = data

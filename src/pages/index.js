@@ -34,6 +34,7 @@ export const pageQuery = graphql`
             date
             slug
             thumbnailImg
+            tags
           }
         }
       }
