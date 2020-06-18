@@ -2,7 +2,7 @@
 slug: "/work/progressive-annual-report"
 date: "2020-06-16"
 title: "Progressive Annual Report"
-thumbnailImg: "https://placeimg.com/640/480/animals"
+thumbnailImg: "https://placeimg.com/640/480/nature"
 ---
 
 ## It’s gonna be great

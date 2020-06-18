@@ -2,8 +2,14 @@ import React from "react"
 
 const ProjectLink = ({ post }) => (
   <li className="project-link">
-    <a href="{post.frontmatter.slug}">
-      {post.frontmatter.title} ({post.frontmatter.date})
+    <a href={post.frontmatter.slug}>
+      <img
+        className="project-link__img"
+        src={post.frontmatter.thumbnailImg}
+      />
+      <span className="project-link__title">
+        {post.frontmatter.title}
+      </span>
     </a>
   </li>
 )

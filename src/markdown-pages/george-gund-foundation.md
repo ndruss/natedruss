@@ -1,7 +1,8 @@
 ---
 slug: "/work/george-gund-foundation"
-date: "2019-05-04"
+date: "2020-06-17"
 title: "George Gund Foundation"
+thumbnailImg: "https://placeimg.com/640/480/arch"
 ---
 
 ## It’s gonna be great
