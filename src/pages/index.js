@@ -3,28 +3,23 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import Intro from "../components/site-intro"
-import ProjectLink from "../components/project-link"
+import ProjectList from "../components/project-list"
 
 export default ({
   data: {
     allMarkdownRemark: { edges },
   }
-}) => {
-  const Posts = edges
-    .map(edge => <ProjectLink key={edge.node.id} post={edge.node} />)
-
-  return (
-    <>
-      <Head title="Home" />
-      <Intro />
-      <Layout>
-        <div id="work" className="container">
-          <ul>{Posts}</ul>
-        </div>
-      </Layout>
-    </>
-  )
-}
+}) => (
+  <>
+    <Head title="Home" />
+    <Intro />
+    <Layout>
+      <div id="work" className="container">
+        <ProjectList data={edges} />
+      </div>
+    </Layout>
+  </>
+)
 
 export const pageQuery = graphql`
   query {
@@ -38,6 +33,7 @@ export const pageQuery = graphql`
             title
             date
             slug
+            thumbnailImg
           }
         }
       }
