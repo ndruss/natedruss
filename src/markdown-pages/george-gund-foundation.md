@@ -2,7 +2,9 @@
 slug: "/work/george-gund-foundation"
 date: "2020-06-17"
 title: "George Gund Foundation"
-thumbnailImg: "https://placeimg.com/640/480/arch"
+thumbnailImg:
+  url: "https://placeimg.com/640/480/animals"
+  alt: "Animals"
 tags: [code, frontmatter, blog, gatsby, yaml]
 ---
 

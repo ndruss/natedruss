@@ -2,7 +2,9 @@
 slug: "/work/cru-uncorked"
 date: "2019-05-04"
 title: "Cru Uncorked"
-thumbnailImg: "https://placeimg.com/640/480/animals"
+thumbnailImg:
+  url: "https://placeimg.com/640/480/nature"
+  alt: "Nature"
 ---
 
 ## It’s gonna be great

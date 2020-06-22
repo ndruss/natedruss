@@ -29,11 +29,15 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          id
           frontmatter {
             title
             date
             slug
-            thumbnailImg
+            thumbnailImg {
+              url
+              alt
+            }
             tags
           }
         }
