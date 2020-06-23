@@ -34,11 +34,11 @@ export const pageQuery = graphql`
             title
             date
             slug
+            description
             thumbnailImg {
               url
               alt
             }
-            tags
           }
         }
       }

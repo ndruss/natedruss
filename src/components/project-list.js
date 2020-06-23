@@ -2,18 +2,27 @@ import React from "react"
 import styles from "./project-list.module.css"
 
 const ProjectLink = ({ post }) => {
+
+  const project = post.frontmatter;
+
+  const Description = () => {
+    return project.description ? (
+      <h4 className={styles.description}>{project.description}</h4>
+    ) : ''
+  }
+
   return (
     <li className={styles.listItem}>
-      <a className={styles.link} href={post.frontmatter.slug}>
+      <a className={styles.link} href={project.slug}>
         <div className={styles.inner}>
           <img
             className={styles.img}
-            src={post.frontmatter.thumbnailImg.url}
-            alt={post.frontmatter.thumbnailImg.alt}
+            src={project.thumbnailImg.url}
+            alt={project.thumbnailImg.alt}
           />
           <div className={styles.info}>
-            <h2 className={styles.title}>{post.frontmatter.title}</h2>
-            <h4 className={styles.description}>A cool project</h4>
+            <h2 className={styles.title}>{project.title}</h2>
+            <Description />
           </div>
         </div>
       </a>

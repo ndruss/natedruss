@@ -26,6 +26,7 @@
   display: block;
   border-radius: 14px;
   overflow: hidden;
+  background: var(--color-background);
   box-shadow: 
     0 0 0 13px var(--color-background),
     0 0 0 14px var(--color-gray);
@@ -43,13 +44,14 @@
 }
 
 .info {
-  padding: 1em 0;
+  padding-top: .75em;
+  padding-bottom: .75em;
 }
 
 .title {
   margin: 0;
-  display: inline-block;
-  line-height: 1.45;
+  font-size: 1.33em;
+  line-height: 1.25;
 }
 
 .link:hover .title {
@@ -57,7 +59,8 @@
 }
 
 .description {
-  margin: 0;
   color: var(--color-foreground);
   font-weight: 100;
+  margin-top: .25em;
+  margin-bottom: 0;
 }

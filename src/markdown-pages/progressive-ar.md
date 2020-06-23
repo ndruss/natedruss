@@ -2,6 +2,7 @@
 slug: "/work/progressive-annual-report"
 date: "2020-06-16"
 title: "Progressive Annual Report"
+description: "My cool project"
 thumbnailImg:
   url: "https://placeimg.com/640/480/arch"
   alt: "Architecture"
