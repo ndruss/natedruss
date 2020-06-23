@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./project-list.module.css"
+import styles from "./project-list.module.scss"
 
 const ProjectLink = ({ post }) => {
 
