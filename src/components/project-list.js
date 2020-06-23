@@ -12,9 +12,8 @@ const ProjectLink = ({ post }) => {
             alt={post.frontmatter.thumbnailImg.alt}
           />
           <div className={styles.info}>
-            <h2 className={styles.title}>
-              {post.frontmatter.title}
-            </h2>
+            <h2 className={styles.title}>{post.frontmatter.title}</h2>
+            <h4 className={styles.description}>A cool project</h4>
           </div>
         </div>
       </a>
