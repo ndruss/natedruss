@@ -1,0 +1,30 @@
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+.listItem {
+  display: block;
+}
+
+.link {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 
+    0 0 0 9px var(--color-background),
+    0 0 0 10px var(--color-gray);
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+}
+
+.title {
+  margin: 0;
+}

@@ -2,6 +2,7 @@
   --color-blue: #42babb;
   --color-gray-extralight: #d1d6df;
   --color-gray-light: #a1a5ad;
+  --color-gray: #828282;
   --color-gray-dark: #1c1d1f;
   --color-background: var(--color-gray-dark);
   --color-foreground: var(--color-gray-extralight);

@@ -1,17 +1,20 @@
 import React from "react"
+import styles from "./project-list.module.css"
 
 const ProjectLink = ({ post }) => {
   return (
-    <li className="project-link">
-      <a href={post.frontmatter.slug}>
+    <li className={styles.listItem}>
+      <a className={styles.link} href={post.frontmatter.slug}>
         <img
-          className="project-link__img"
+          className={styles.img}
           src={post.frontmatter.thumbnailImg.url}
           alt={post.frontmatter.thumbnailImg.alt}
         />
-        <span className="project-link__title">
-          {post.frontmatter.title}
-        </span>
+        <div className={styles.info}>
+          <h2 className={styles.title}>
+            {post.frontmatter.title}
+          </h2>
+        </div>
       </a>
     </li>
   )
@@ -19,9 +22,9 @@ const ProjectLink = ({ post }) => {
 
 const ProjectList = ({ data }) => {
   const Posts = data
-    .map(edge => <ProjectLink key={edge.node.id} post={edge.node} />)
+  .map(edge => <ProjectLink key={edge.node.id} post={edge.node} />)
     
-  return <ul className="project-list">{Posts}</ul>
+  return <ul className={styles.list}>{Posts}</ul>
 }
 
 export default ProjectList
