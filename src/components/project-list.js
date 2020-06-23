@@ -5,15 +5,17 @@ const ProjectLink = ({ post }) => {
   return (
     <li className={styles.listItem}>
       <a className={styles.link} href={post.frontmatter.slug}>
-        <img
-          className={styles.img}
-          src={post.frontmatter.thumbnailImg.url}
-          alt={post.frontmatter.thumbnailImg.alt}
-        />
-        <div className={styles.info}>
-          <h2 className={styles.title}>
-            {post.frontmatter.title}
-          </h2>
+        <div className={styles.inner}>
+          <img
+            className={styles.img}
+            src={post.frontmatter.thumbnailImg.url}
+            alt={post.frontmatter.thumbnailImg.alt}
+          />
+          <div className={styles.info}>
+            <h2 className={styles.title}>
+              {post.frontmatter.title}
+            </h2>
+          </div>
         </div>
       </a>
     </li>

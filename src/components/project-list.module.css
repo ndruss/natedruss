@@ -1,7 +1,7 @@
 .list {
   list-style-type: none;
   margin: 0;
-  padding: 30px 0;
+  padding: 15px 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 30px;
@@ -13,11 +13,28 @@
 
 .link {
   display: block;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.link:hover {
+  background: inherit;
+  color: var(--color-blue);
+}
+
+.inner {
+  display: block;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 
-    0 0 0 9px var(--color-background),
-    0 0 0 10px var(--color-gray);
+    0 0 0 13px var(--color-background),
+    0 0 0 14px var(--color-gray);
+}
+
+.link:hover .inner {
+  box-shadow: 
+    0 0 0 13px var(--color-background),
+    0 0 0 14px var(--color-blue);
 }
 
 .img {
@@ -25,6 +42,16 @@
   max-width: 100%;
 }
 
+.info {
+  padding: 1em 0;
+}
+
 .title {
   margin: 0;
+  display: inline-block;
+  line-height: 1.45;
+}
+
+.link:hover .title {
+  text-decoration: underline;
 }
