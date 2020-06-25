@@ -24,10 +24,11 @@ body {
   line-height: 1.6;
   color: var(--color-foreground);
   background: var(--color-background);
+  
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   padding-left: 1em;
   padding-right: 1em;
   margin-left: auto;
@@ -42,7 +43,7 @@ body {
 }
 
 .container--wide {
-  max-width: none;
+  /* max-width: none; */
 }
 
 a {

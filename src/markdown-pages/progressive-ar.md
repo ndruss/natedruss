@@ -1,10 +1,10 @@
 ---
-slug: "/work/progressive-annual-report"
+slug: "/work/progressive"
 date: "2020-06-16"
-title: "Progressive Annual Report"
-description: "My cool project"
+title: "Progressive"
+description: "Interactive annual report"
 thumbnailImg:
-  url: "https://placeimg.com/640/480/arch"
+  url: "https://placeimg.com/900/640/arch"
   alt: "Architecture"
 ---
 
