@@ -11,7 +11,7 @@ export default ({
   }
 }) => (
   <>
-    <Head title="Home" />
+    <Head />
     <Intro />
     <Layout>
       <div id="work" className="container">

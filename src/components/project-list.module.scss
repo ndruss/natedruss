@@ -1,15 +1,20 @@
 .list {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 15px 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 30px;
+  max-width: 500px;
   @media (min-width: 600px) {
-    // grid-template-columns: 1fr 1fr;
+    width: 90%;
+    padding: 30px 0;
+    max-width: 800px;
+    grid-gap: 50px;
   }
-  @media (min-width: 900px) {
-    // grid-template-columns: 1fr 1fr 1fr;
+  @media (min-width: 960px) {
+    padding: 48px 0;
+    grid-gap: 60px;
   }
 }
 
@@ -21,6 +26,9 @@
   display: block;
   padding: 14px;
   text-decoration: none;
+  @media (min-width: 600px) {
+    padding: 20px;
+  }
 }
 
 .link:hover {
@@ -29,19 +37,25 @@
 }
 
 .inner {
+  --inner-shadow: 13px;
+  --outer-shadow: 14px;
   display: block;
   border-radius: 14px;
   overflow: hidden;
   background: var(--color-background);
   box-shadow: 
-    0 0 0 13px var(--color-background),
-    0 0 0 14px var(--color-gray);
+    0 0 0 var(--inner-shadow) var(--color-background),
+    0 0 0 var(--outer-shadow) var(--color-gray);
+  @media (min-width: 600px) {
+    --inner-shadow: 19px;
+    --outer-shadow: 20px;
+  }
 }
 
 .link:hover .inner {
   box-shadow: 
-    0 0 0 13px var(--color-background),
-    0 0 0 14px var(--color-blue);
+    0 0 0 var(--inner-shadow) var(--color-background),
+    0 0 0 var(--outer-shadow) var(--color-blue);
 }
 
 .img {
@@ -58,6 +72,9 @@
   margin: 0;
   font-size: 1.33em;
   line-height: 1.25;
+  @media (min-width: 600px) {
+    font-size: 1.5em;
+  }
 }
 
 .link:hover .title {
@@ -66,7 +83,11 @@
 
 .description {
   color: var(--color-foreground);
-  font-weight: 100;
+  font-size: .9em;
+  font-weight: 300;
   margin-top: .25em;
   margin-bottom: 0;
+  @media (min-width: 600px) {
+    font-size: 1em;
+  }
 }

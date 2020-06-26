@@ -2,7 +2,7 @@
   background: var(--color-background);
   padding-top: .5em;
   padding-bottom: .5em;
-  border-bottom: solid 1px var(--color-foreground);
+  border-bottom: solid 1px var(--color-gray);
   height: var(--header-height);
   position: sticky;
   top: 0;
@@ -38,6 +38,7 @@
   content: '/';
   display: inline-block;
   padding: 0 0.5em;
+  color: var(--color-gray);
 }
 
 .listItem a {

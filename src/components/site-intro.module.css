@@ -5,6 +5,10 @@
   min-height: calc(100vmin - var(--header-height));
 }
 
+.intro header {
+  width: 100%;
+}
+
 .intro h1 {
   font-size: 1.5em;
   margin: 0;
