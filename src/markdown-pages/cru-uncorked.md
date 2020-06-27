@@ -3,9 +3,6 @@ slug: "/work/cru-uncorked"
 date: "2019-05-04"
 title: "Cru Uncorked"
 description: "Website for a French fine dining restaurant"
-thumbnailImg:
-  url: "https://placeimg.com/900/640/nature"
-  alt: "Nature"
 ---
 
 ## It’s gonna be great

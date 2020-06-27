@@ -36,7 +36,7 @@ export const pageQuery = graphql`
             slug
             description
             thumbnailImg {
-              url
+              fileName
               alt
             }
           }

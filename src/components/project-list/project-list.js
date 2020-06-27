@@ -1,8 +1,21 @@
 import React from "react"
+import { useStaticQuery } from "gatsby"
 import styles from "./project-list.module.scss"
 
 const ProjectLink = ({ post }) => {
-
+  const imgData = useStaticQuery(graphql `
+    {
+      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+        edges {
+          node {
+            publicURL
+            absolutePath
+            relativePath
+          }
+        }
+      }
+    }
+  `)
   const project = post.frontmatter;
 
   const Description = () => {
@@ -11,15 +24,28 @@ const ProjectLink = ({ post }) => {
     ) : ''
   }
 
+  const Img = () => {
+    if (project.thumbnailImg) {
+      const image = imgData.allFile.edges
+      .find(file => file.node.relativePath === project.thumbnailImg.fileName)
+
+      console.log(image.node)
+      return (
+        <img
+          className={styles.img}
+          src={image.node.publicURL}
+          alt={project.thumbnailImg.alt}
+        />
+      )
+    }
+    return ''
+  }
+
   return (
     <li className={styles.listItem}>
       <a className={styles.link} href={project.slug}>
         <div className={styles.inner}>
-          <img
-            className={styles.img}
-            src={project.thumbnailImg.url}
-            alt={project.thumbnailImg.alt}
-          />
+          <Img />
           <div className={styles.info}>
             <h2 className={styles.title}>{project.title}</h2>
             <Description />
@@ -31,6 +57,7 @@ const ProjectLink = ({ post }) => {
 }
 
 const ProjectList = ({ data }) => {
+  
   const Posts = data
   .map(edge => <ProjectLink key={edge.node.id} post={edge.node} />)
     
