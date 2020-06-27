@@ -1,5 +1,5 @@
 ---
-slug: "/work/cru-uncorked"
+slug: "cru-uncorked"
 date: "2019-05-04"
 title: "Cru Uncorked"
 description: "Website for a French fine dining restaurant"

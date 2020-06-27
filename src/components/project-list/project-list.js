@@ -24,7 +24,7 @@ const ProjectLink = ({ post }) => {
     ) : ''
   }
 
-  const Img = () => {
+  const ThumbnailImg = () => {
     if (project.thumbnailImg) {
       const image = imgData.allFile.edges
       .find(file => file.node.relativePath === project.thumbnailImg.fileName)
@@ -43,9 +43,9 @@ const ProjectLink = ({ post }) => {
 
   return (
     <li className={styles.listItem}>
-      <a className={styles.link} href={project.slug}>
+      <a className={styles.link} href={`/work/${project.slug}`}>
         <div className={styles.inner}>
-          <Img />
+          <ThumbnailImg />
           <div className={styles.info}>
             <h2 className={styles.title}>{project.title}</h2>
             <Description />

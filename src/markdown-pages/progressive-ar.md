@@ -1,5 +1,5 @@
 ---
-slug: "/work/progressive"
+slug: "progressive"
 date: "2020-06-16"
 title: "Progressive"
 description: "Interactive annual report"
