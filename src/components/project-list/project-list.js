@@ -2,21 +2,8 @@ import React from "react"
 import { useStaticQuery } from "gatsby"
 import styles from "./project-list.module.scss"
 
-const ProjectLink = ({ post }) => {
-  const imgData = useStaticQuery(graphql `
-    {
-      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-        edges {
-          node {
-            publicURL
-            absolutePath
-            relativePath
-          }
-        }
-      }
-    }
-  `)
-  const project = post.frontmatter;
+const ProjectLink = props => {
+  const project = props.post.frontmatter;
 
   const Description = () => {
     return project.description ? (
@@ -25,20 +12,13 @@ const ProjectLink = ({ post }) => {
   }
 
   const ThumbnailImg = () => {
-    if (project.thumbnailImg) {
-      const image = imgData.allFile.edges
-      .find(file => file.node.relativePath === project.thumbnailImg.fileName)
-
-      console.log(image.node)
-      return (
-        <img
-          className={styles.img}
-          src={image.node.publicURL}
-          alt={project.thumbnailImg.alt}
-        />
-      )
-    }
-    return ''
+    return props.thumbnail ? (
+      <img
+        className={styles.img}
+        src={props.thumbnail.node.publicURL}
+        alt={project.thumbnailImg.alt}
+      />
+    ) : ''
   }
 
   return (
@@ -57,11 +37,41 @@ const ProjectLink = ({ post }) => {
 }
 
 const ProjectList = ({ data }) => {
+
+  const imgData = useStaticQuery(graphql `
+    {
+      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+        edges {
+          node {
+            publicURL
+            absolutePath
+            relativePath
+          }
+        }
+      }
+    }
+  `)
+
+  const getThumbnail = post => {
+    if (post.thumbnailImg) {
+      const path = post.slug + '/' + post.thumbnailImg.fileName
+      return imgData.allFile.edges
+      .find(file => file.node.relativePath === path)
+    }
+    return null
+  }
   
-  const Posts = data
-  .map(edge => <ProjectLink key={edge.node.id} post={edge.node} />)
-    
-  return <ul className={styles.list}>{Posts}</ul>
+  return (
+    <ul className={styles.list}>
+      {data.map(edge => 
+        <ProjectLink
+          key={edge.node.id}
+          post={edge.node}
+          thumbnail={getThumbnail(edge.node.frontmatter)}
+        />
+      )}
+    </ul>
+  )
 }
 
 export default ProjectList
