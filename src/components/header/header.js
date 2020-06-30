@@ -10,7 +10,7 @@ const ListLink = props => (
 
 export default () => (
   <header className={styles.header}>
-    <div className="container container--wide">
+    <div className="container container--full">
       <div className={styles.logo}>
         <Link to="/">
           <span className="screen-reader-text">Nate Druss</span>

@@ -6,8 +6,9 @@ const ProjectLink = props => {
   const project = props.post.frontmatter;
 
   const Description = () => {
-    return project.description ? (
-      <h4 className={styles.description}>{project.description}</h4>
+    const description = project.shortDescription
+    return description ? (
+      <h4 className={styles.description}>{description}</h4>
     ) : ''
   }
 

@@ -2,7 +2,8 @@
 slug: "george-gund-foundation"
 date: "2020-06-17"
 title: "George Gund Foundation"
-description: "Wordpress theme family"
+description: "A set of adaptable themes for the George Gund Foundation's Wordpress site"
+shortDescription: "Wordpress theme family"
 tags: [code, frontmatter, blog, gatsby, yaml]
 thumbnailImg:
   fileName: "gund-foundation-screenshot.png"
