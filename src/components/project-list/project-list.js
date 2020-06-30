@@ -15,7 +15,7 @@ const ProjectLink = props => {
     <li className={styles.listItem}>
       <a className={styles.link} href={`/work/${project.slug}`}>
         <div className={styles.inner}>
-          <Thumbnail post={props.post} />
+          <Thumbnail frontmatter={project} />
           <div className={styles.info}>
             <h2 className={styles.title}>{project.title}</h2>
             <Description />

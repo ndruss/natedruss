@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
+import Thumbnail from "../components/thumbnail/thumbnail"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -15,6 +16,7 @@ export default function Template({
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.description}</h2>
+          <Thumbnail frontmatter={frontmatter} />
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}

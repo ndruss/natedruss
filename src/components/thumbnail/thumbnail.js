@@ -17,7 +17,7 @@ export default function Thumbnail(props) {
     }
   `)
 
-  const post = props.post.frontmatter;
+  const post = props.frontmatter;
   
   if (post.thumbnailImg) {
     const path = post.slug + '/' + post.thumbnailImg.fileName
