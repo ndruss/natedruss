@@ -3,6 +3,9 @@ slug: "progressive"
 date: "2020-06-16"
 title: "Progressive"
 description: "Interactive annual report"
+thumbnailImg:
+  fileName: "progressive-screenshot.png"
+  alt: "Progressive interactive annual report screenshot"
 
 ---
 
