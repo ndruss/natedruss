@@ -1,0 +1,18 @@
+.list {
+  list-style-type: none;
+  padding: 1em 0;
+  margin: 0;
+}
+
+.item {
+  display: inline-block;
+  font-size: .9em;
+  line-height: 1.6;
+  padding: .15em .75em;
+  border: solid 1px var(--color-gray);
+  border-radius: 2em;
+  margin-top: .375em;
+  margin-right: .5em;
+  margin-bottom: .375em;
+}
+
