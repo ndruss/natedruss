@@ -23,7 +23,10 @@ export default function Template({
           <TagList tags={frontmatter.tags}/>
         </header>
         <div className="container--wide">
-          <Thumbnail frontmatter={frontmatter} />
+          <Thumbnail
+            frontmatter={frontmatter}
+            className={styles.thumbnail}
+          />
         </div>
         <div
           className={`container ${styles.content}`}

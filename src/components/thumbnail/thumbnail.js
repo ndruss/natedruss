@@ -24,9 +24,11 @@ export default function Thumbnail(props) {
     const image = imgData.allFile.edges
     .find(file => file.node.relativePath === path)
 
+    const imgClass = props.className ? props.className : 'thumbnail'
+
     return image ? (
       <img
-        className="thumbnail"
+        className={imgClass}
         src={image.node.publicURL}
         alt={post.thumbnailImg.alt}
       />

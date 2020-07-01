@@ -4,6 +4,9 @@ date: "2019-05-04"
 title: "Cru Uncorked"
 description: "Website for a French fine dining restaurant"
 shortDescription: "Website for a French fine dining restaurant"
+thumbnailImg:
+  fileName: "cru-screenshot.png"
+  alt: "Cru Uncorked website screenshot"
 ---
 
 ## It’s gonna be great

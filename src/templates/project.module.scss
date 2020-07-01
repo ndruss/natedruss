@@ -4,11 +4,11 @@
   @media (min-width: 760px) {
     text-align: center;
     padding-top: 5em;
-    padding-bottom: 7em;
+    padding-bottom: 4em;
   }
   @media (min-width: 960px) {
-    padding-top: 7em;
-    padding-bottom: 10em;
+    padding-top: 6em;
+    padding-bottom: 5em;
   }
 }
 
@@ -30,4 +30,17 @@
   @media (min-width: 760px) {
     font-size: 1.25em;
   }
+}
+
+.thumbnail {
+  margin-bottom: 2em;
+}
+
+.content {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.content > *:first-child {
+  margin-top: 0;
 }
