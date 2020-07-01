@@ -33,7 +33,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         // additional data can be passed via context
         slug: node.frontmatter.slug,
-        path: `/work/${node.frontmatter.slug}`,
+        relativePath: `/work/${node.frontmatter.slug}`,
       },
     })
   })
