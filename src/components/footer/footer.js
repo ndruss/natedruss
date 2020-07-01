@@ -11,7 +11,7 @@ const ListLinkContact = props => (
 
 export default () => (
   <footer className={styles.footer}>
-    <div className={`container ${styles.container}`}>
+    <div className={`container--full ${styles.container}`}>
       <div className={styles.column}>
         <p>Nate Druss<br />
         Designer/Developer – Cleveland, OH</p>

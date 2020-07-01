@@ -5,13 +5,33 @@
 
 .container {
   display: grid;
+  @media (min-width: 760px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .column {
   font-size: .75em;
   font-weight: normal;
+  @media (min-width: 760px) {
+    font-size: .9em;
+  }
 }
 
 .column p {
   margin: 0;
+}
+
+.contactLinks {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  @media (min-width: 760px) {
+    justify-content: flex-end;
+  }
+}
+
+.contactLinks > li {
+  margin-right: .5em;
 }
