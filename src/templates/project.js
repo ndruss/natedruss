@@ -12,6 +12,23 @@ export default function Template({
   // data.markdownRemark holds your post data
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  const { allMarkdownRemark } = data
+
+  const getNextProject = () => {
+    const allProjects = allMarkdownRemark.edges
+
+    const thisNode = allProjects
+    .find(edge => edge.node.frontmatter.slug === frontmatter.slug)
+
+    const position = allProjects.indexOf(thisNode)
+    if (position === allProjects.length - 1) {
+      return allProjects[0]
+    }
+    return allProjects[position + 1]
+  }
+
+  const nextProject = getNextProject().node.frontmatter
+
   return (
     <Layout>
       <Head title={frontmatter.title} />
@@ -32,6 +49,12 @@ export default function Template({
           className={`container ${styles.content}`}
           dangerouslySetInnerHTML={{ __html: html }}
         />
+        <footer className="container">
+          <div className={styles.nextLink}>
+            Next Project:<br />
+            <a href={`/work/${nextProject.slug}`}>{nextProject.title}</a>
+          </div>
+        </footer>
       </article>
 
     </Layout>
@@ -51,6 +74,20 @@ export const pageQuery = graphql`
         thumbnailImg {
           fileName
           alt
+        }
+      }
+    }
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+            slug
+          }
         }
       }
     }
