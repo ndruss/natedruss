@@ -5,7 +5,7 @@ export default function TagList(props) {
   return props.tags ? (
     <ul className={styles.list}>
       {props.tags.map(tag =>
-        <li className={styles.item}>{tag}</li>
+        <li key={tag} className={styles.item}>{tag}</li>
       )}
     </ul>
   ) : '';
