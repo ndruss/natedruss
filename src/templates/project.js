@@ -2,14 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import Thumbnail from "../components/thumbnail/thumbnail"
+import Thumbnail from "../components/thumbnail"
+import TagList from "../components/tag-list"
 import styles from "./project.module.scss"
-import TagList from "../components/tag-list/tag-list"
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  // data.markdownRemark holds your post data
+export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { allMarkdownRemark } = data
