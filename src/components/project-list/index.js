@@ -1,5 +1,5 @@
 import React from "react"
-import Thumbnail from "../thumbnail/thumbnail"
+import Thumbnail from "../thumbnail"
 import styles from "./project-list.module.scss"
 
 const ProjectLink = props => {
