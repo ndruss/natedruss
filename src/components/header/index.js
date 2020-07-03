@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import styles from "./header.module.css"
+import styles from "./header.module.scss"
+import Logo from "../../images/svg/nate-druss-logo.svg"
 
 const ListLink = props => (
   <li className={styles.listItem}>
@@ -13,6 +14,7 @@ export default () => (
     <div className="container container--full">
       <div className={styles.logo}>
         <Link to="/">
+          <Logo />
           <span className="screen-reader-text">Nate Druss</span>
         </Link>
       </div>
