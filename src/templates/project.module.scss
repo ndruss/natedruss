@@ -44,3 +44,17 @@
 .content > *:first-child {
   margin-top: 0;
 }
+
+.nextProjectLink {
+  padding: 1em 0;
+  width: 100%;
+  @media (min-width: 600px) {
+    max-width: 500px;
+    padding-top: 2em;
+    padding-bottom: 3em;
+  }
+  @media (min-width: 960px) {
+    padding-top: 4em;
+    padding-bottom: 5em;
+  }
+}

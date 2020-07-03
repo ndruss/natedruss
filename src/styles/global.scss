@@ -52,6 +52,12 @@ body {
   max-width: none;
 }
 
+.flex-center {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 a {
   color: var(--color-blue);
 }
