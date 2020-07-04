@@ -9,9 +9,7 @@ thumbnailImg:
   alt: "Cru Uncorked website screenshot"
 ---
 
-## It’s gonna be great
-
-### Nulla bibendum
+## About the Project
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam odio at iaculis gravida. Pellentesque luctus sapien in aliquet mattis. Proin sollicitudin porttitor sem.
 

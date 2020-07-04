@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import Thumbnail from "../components/thumbnail"
-import TagList from "../components/tag-list"
-import ProjectLink from "../components/project-link";
+import Layout from "../../components/layout"
+import Head from "../../components/head"
+import Thumbnail from "../../components/thumbnail"
+import TagList from "../../components/tag-list"
+import ProjectLink from "../../components/project-link";
 import styles from "./project.module.scss"
 
 export default function Template({ data }) {
@@ -32,10 +32,12 @@ export default function Template({ data }) {
           />
         </div>
 
-        <div
-          className={`container ${styles.content}`}
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div class="container">
+          <div
+            className={`body-text ${styles.content}`}
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </div>
 
         <footer className="container flex-center">
           <div className={styles.nextProjectLink}>

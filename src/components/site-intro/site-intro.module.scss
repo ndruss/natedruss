@@ -1,0 +1,45 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vmin - var(--header-height));
+}
+
+.intro header {
+  width: 100%;
+}
+
+.intro h1 {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0;
+  @media (min-width: 375px) {
+    font-size: 2.2em;
+  }
+  @media (min-width: 600px) {
+    font-size: 3em;
+  }
+  @media (min-width: 960px) {
+    font-size: 4em;
+  }
+}
+
+.intro h2 {
+  font-size: 1em;
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.33;
+  @media (min-width: 600px) {
+    font-size: 1.15em;
+  }
+  @media (min-width: 960px) {
+    font-size: 1.5em;
+  }
+}
+
+.textBlock {
+  padding: 1em 3% 2em;
+  @media (min-width: 600px) {
+    padding: 1em 5% 2em;
+  }
+}
