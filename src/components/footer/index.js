@@ -1,9 +1,13 @@
 import React from "react"
 import styles from "./footer.module.scss"
+import IconEmail from "../../images/svg/email-icon.svg"
+import IconLinkedIn from "../../images/svg/linkedin-icon.svg"
+import IconCodePen from "../../images/svg/codepen-icon.svg"
 
 const ListLinkContact = props => (
   <li>
     <a href={props.url} className={styles.iconLink}>
+      {props.children}
       <span>{props.name}</span>
     </a>
   </li>
@@ -18,9 +22,15 @@ export default () => (
       </div>
       <div className={styles.column}>
         <ul className={styles.contactLinks}>
-          <ListLinkContact url="/" name="Email" />
-          <ListLinkContact url="/" name="LinkedIn" />
-          <ListLinkContact url="/" name="CodePen" />
+          <ListLinkContact url="mailto:nhdruss@gmail.com" name="Email">
+            <IconEmail />
+          </ListLinkContact>
+          <ListLinkContact url="https://www.linkedin.com/in/nate-druss-59b6321a7/" name="LinkedIn">
+            <IconLinkedIn />
+          </ListLinkContact>
+          <ListLinkContact url="https://codepen.io/nate_druss" name="CodePen">
+            <IconCodePen />
+          </ListLinkContact>
         </ul>
       </div>
     </div>
