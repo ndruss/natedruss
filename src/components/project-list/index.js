@@ -8,8 +8,8 @@ import styles from "./project-list.module.scss"
 export default ({ data }) => (
   <ul className={styles.list}>
     {data.map(edge => (
-      <li className={styles.listItem}>
-        <ProjectLink key={edge.node.id} post={edge.node}>
+      <li key={edge.node.id} className={styles.listItem}>
+        <ProjectLink post={edge.node}>
           <Thumbnail frontmatter={edge.node.frontmatter} />
           <h2>{edge.node.frontmatter.title}</h2>
           <h4>{edge.node.frontmatter.shortDescription}</h4>
