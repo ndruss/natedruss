@@ -103,8 +103,13 @@ function getNextProject(allMarkdownRemark, frontmatter) {
 }
 
 const bodyText = document.querySelector('.body-text')
-bodyText.querySelectorAll('a').forEach(link => {
-  if (link.hostname !== window.location.origin) {
-    link.target = "_blank"
+if (bodyText) {
+  if (bodyText.querySelectorAll('a')) {
+    bodyText.querySelectorAll('a').forEach(link => {
+      if (link.hostname !== window.location.origin) {
+        link.target = "_blank"
+      }
+    })
   }
-})
+}
+
