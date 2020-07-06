@@ -4,14 +4,17 @@ import IconEmail from "../../images/svg/email-icon.svg"
 import IconLinkedIn from "../../images/svg/linkedin-icon.svg"
 import IconCodePen from "../../images/svg/codepen-icon.svg"
 
-const ListLinkContact = props => (
-  <li>
-    <a href={props.url} className={styles.iconLink}>
-      {props.children}
-      <span>{props.name}</span>
-    </a>
-  </li>
-)
+const ListLinkContact = props => {
+  const linkClass = camelize(props.name)
+  return (
+    <li>
+      <a href={props.url} className={styles.iconLink + ' ' + linkClass}>
+        {props.children}
+        <span className="screen-reader-text">{props.name}</span>
+      </a>
+    </li>
+  )
+}
 
 export default () => (
   <footer className={styles.footer}>
@@ -36,3 +39,9 @@ export default () => (
     </div>
   </footer>
 )
+
+function camelize(str) {
+  return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+    return index === 0 ? word.toLowerCase() : word.toUpperCase();
+  }).replace(/\s+/g, '');
+}
