@@ -4,11 +4,8 @@
   border-top: solid 1px var(--color-gray);
   margin-top: 2em;
   @media (min-width: 760px) {
-    padding-top: 4em;
-  }
-  @media (min-width: 960px) {
-    padding-top: 5em;
-    padding-bottom: 5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 }
 
@@ -16,7 +13,8 @@
   display: grid;
   @media (min-width: 760px) {
     grid-column-gap: 1em;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
   }
 }
 
@@ -24,8 +22,11 @@
   font-size: .75em;
   font-weight: normal;
   text-align: center;
-  @media (min-width: 760px) {
+  @media (min-width: 480px) {
     font-size: .9em;
+  }
+  @media (min-width: 760px) {
+    font-size: 1em;
     text-align: left;
   }
 }
@@ -45,7 +46,7 @@
 .contactLinks > li {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 1em;
+  margin: 0 10px;
 }
 
 .iconLink {
