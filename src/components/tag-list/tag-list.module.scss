@@ -10,8 +10,11 @@
 }
 
 .item {
+  color: var(--color-gray-light);
   font-size: .9em;
-  line-height: 1.6;
+  @media (min-width: 960px) {
+    font-size: 1em;
+  }
 }
 
 .item + .item::before {

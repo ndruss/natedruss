@@ -32,7 +32,7 @@ export default function Template({ data }) {
           />
         </div>
 
-        <div class="container">
+        <div className="container">
           <div
             className={`body-text ${styles.content}`}
             dangerouslySetInnerHTML={{ __html: html }}
