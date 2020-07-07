@@ -1,6 +1,6 @@
 ---
 slug: "george-gund-foundation"
-date: "2020-06-17"
+date: "2020-05-17"
 title: "George Gund Foundation"
 description: "A set of adaptable themes for the George Gund Foundation’s WordPress site"
 shortDescription: "WordPress theme family"
@@ -12,4 +12,5 @@ thumbnailImg:
 
 ## About the Project
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam odio at iaculis gravida. Pellentesque luctus sapien in aliquet mattis. Proin sollicitudin porttitor sem.
+The George Gund Foundation is a private, nonprofit organization focused on human well-being and the progress of society. While working at [Nesnadny + Schwartz](https://nsideas.com), I was tasked with building their new website and developing a system that would enable it to be easily reskinned on a yearly basis to reflect the foundation’s current primary focus. In order to make this possible, I created two WordPress themes—a parent theme which included all the core styles and functionality, and a child theme which included the styles and functionality specific to the yearly area of interest.
+
