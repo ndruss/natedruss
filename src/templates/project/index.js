@@ -20,7 +20,7 @@ export default function Template({ data }) {
       <article className={styles.article}>
 
         <header className={`container ${styles.header}`}>
-          <h1>{frontmatter.title}</h1>
+          <h1 className="page-title">{frontmatter.title}</h1>
           <p className={styles.description}>{frontmatter.description}</p>
           <TagList tags={frontmatter.tags}/>
         </header>

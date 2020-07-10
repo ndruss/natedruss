@@ -7,7 +7,7 @@ export default ({ data }) => (
   <Layout className="page-info">
     <Head title="Info" />
     <div className="container">
-      <h1>About {data.site.siteMetadata.title}</h1>
+      <h1 className="page-title">About Me</h1>
       <p>
         My name is Nate Druss and I am a multi-disciplinary designer, currently focused on digital media. My passion lies at the intersection of creativity and technology. I'm a big fan of clean code and user-friendly design. If You'd like to get in touch, contact me at nhdruss@gmail.com.
       </p>
