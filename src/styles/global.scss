@@ -8,6 +8,7 @@
   --color-foreground: var(--color-gray-extralight);
  
   --header-height: 50px;
+  --footer-height: 200px;
 }
 
 *,
@@ -93,7 +94,14 @@ h4 {
 }
 
 .main-content {
-  min-height: 50vh;
+  min-height: calc(
+    100vh - var(--header-height) - var(--footer-height)
+  );
   padding-top: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 3em;
+}
+
+.page-info .main-content {
+  display: flex;
+  align-items: center;
 }

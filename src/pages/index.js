@@ -14,7 +14,7 @@ export default ({ data }) => {
     <>
       <Head />
       <Intro />
-      <Layout>
+      <Layout className="page-index">
         <div id="work" className="container">
           <ProjectList data={edges} />
         </div>

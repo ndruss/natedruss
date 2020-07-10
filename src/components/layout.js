@@ -1,12 +1,12 @@
 import React from "react"
-import Header from "./header"
+import Header from "../components/header"
 import Footer from "../components/footer"
 
-export default ({ children }) => (
-  <div className="main-page-wrapper">
+export default props => (
+  <div className={props.className}>
     <Header />
     <main className="main-content">
-      {children}
+      {props.children}
     </main>
     <Footer />
   </div>

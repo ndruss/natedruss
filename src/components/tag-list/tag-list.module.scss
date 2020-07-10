@@ -11,7 +11,11 @@
 
 .item {
   color: var(--color-gray-light);
-  font-size: .9em;
+  font-size: .8em;
+  font-weight: normal;
+  @media (min-width: 760px) {
+    font-size: .9em;
+  }
   @media (min-width: 960px) {
     font-size: 1em;
   }

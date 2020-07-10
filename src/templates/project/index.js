@@ -15,7 +15,7 @@ export default function Template({ data }) {
   const nextProject = getNextProject(allMarkdownRemark, frontmatter)
 
   return (
-    <Layout>
+    <Layout className={`page-${frontmatter.slug}`}>
       <Head title={frontmatter.title} />
       <article className={styles.article}>
 

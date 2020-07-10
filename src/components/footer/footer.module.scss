@@ -2,10 +2,10 @@
   padding-top: 3em;
   padding-bottom: 4em;
   border-top: solid 1px var(--color-gray);
-  margin-top: 2em;
   @media (min-width: 760px) {
     padding-top: 2em;
     padding-bottom: 2em;
+    min-height: var(--footer-height);
   }
 }
 

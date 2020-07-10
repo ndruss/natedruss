@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 
 export default ({ data }) => (
-  <Layout>
+  <Layout className="page-info">
     <Head title="Info" />
     <div className="container">
       <h1>About {data.site.siteMetadata.title}</h1>
