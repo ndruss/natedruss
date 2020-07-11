@@ -3,11 +3,30 @@ import { Link } from "gatsby"
 import styles from "./header.module.scss"
 import Logo from "../../images/svg/nate-druss-logo.svg"
 
-const ListLink = props => (
-  <li className={styles.listItem}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
+const ListLink = props => {
+  const handleClick = e => {
+    e.preventDefault()
+
+    if (e.target.hash && document.querySelector(e.target.hash)) {
+
+      window.history.pushState({content: "work"}, "", e.target.hash)
+
+      document.querySelector(e.target.hash)
+      .scrollIntoView({ behavior: "smooth" })
+
+    } else {
+      window.location = e.target.href
+    }
+  }
+
+  return(
+    <li className={styles.listItem}>
+      <Link onClick={handleClick} to={props.to}>
+        {props.children}
+      </Link>
+    </li>
+  )
+}
 
 export default () => (
   <header className={styles.header}>
