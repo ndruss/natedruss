@@ -11,6 +11,7 @@ export default function Thumbnail(props) {
             publicURL
             absolutePath
             relativePath
+            name
           }
         }
       }
@@ -20,19 +21,31 @@ export default function Thumbnail(props) {
   const post = props.frontmatter;
   
   if (post.thumbnailImg) {
-    const path = post.slug + '/' + post.thumbnailImg.fileName
+    const path = post.slug + "/" + post.thumbnailImg.fileName
+
     const image = imgData.allFile.edges
     .find(file => file.node.relativePath === path)
 
-    const imgClass = props.className ? props.className : 'thumbnail'
+    const highRes = imgData.allFile.edges
+    .find(file => file.node.name === image.node.name + "@2x")
 
-    return image ? (
-      <img
-        className={imgClass}
-        src={image.node.publicURL}
-        alt={post.thumbnailImg.alt}
-      />
-    ) : null
+    if (image) {
+
+      let srcSet = image.node.publicURL + " 1x"
+      if (highRes){
+        srcSet += `, ${highRes.node.publicURL} 2x`
+      }
+
+      return (
+        <img
+          className={props.className ? props.className : "thumbnail"}
+          srcSet={srcSet}
+          src={image.node.publicURL}
+          alt={post.thumbnailImg.alt}
+        />
+      )
+
+    }  
   }
 
   return null

@@ -102,14 +102,3 @@ function getNextProject(allMarkdownRemark, frontmatter) {
   return allProjects[position + 1].node
 }
 
-const bodyText = document.querySelector('.body-text')
-if (bodyText) {
-  if (bodyText.querySelectorAll('a')) {
-    bodyText.querySelectorAll('a').forEach(link => {
-      if (link.hostname !== window.location.origin) {
-        link.target = "_blank"
-      }
-    })
-  }
-}
-
