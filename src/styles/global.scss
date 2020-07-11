@@ -28,6 +28,7 @@ body {
 }
 
 @mixin container {
+  width: 100%;
   max-width: 900px;
   padding-left: 1em;
   padding-right: 1em;
@@ -123,7 +124,14 @@ h4 {
   padding-bottom: 3em;
 }
 
-.page-info .main-content {
+.page-info .main-content,
+.page-404 .main-content {
   display: flex;
   align-items: center;
+}
+
+.page-404 .page-title {
+  @media (min-width: 760px) {
+    font-size: 5em;
+  }
 }
