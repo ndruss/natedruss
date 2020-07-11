@@ -26,10 +26,10 @@ export default function Thumbnail(props) {
     const image = imgData.allFile.edges
     .find(file => file.node.relativePath === path)
 
-    const highRes = imgData.allFile.edges
-    .find(file => file.node.name === image.node.name + "@2x")
-
     if (image) {
+
+      const highRes = imgData.allFile.edges
+      .find(file => file.node.name === image.node.name + "@2x")
 
       let srcSet = image.node.publicURL + " 1x"
       if (highRes){
