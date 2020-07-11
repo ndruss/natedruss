@@ -6,7 +6,7 @@ description: "A set of adaptable themes for the George Gund Foundation’s WordP
 shortDescription: "WordPress theme family"
 tags: ["WordPress Theme Development"]
 thumbnailImg:
-  fileName: "gund-foundation-screenshot.png"
+  fileName: "gund-foundation-screenshot.jpg"
   alt: "George Gund Foundation website screenshot"
 ---
 

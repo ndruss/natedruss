@@ -6,7 +6,7 @@ description: "A microsite for Progressive Corporation’s 2019 annual report"
 shortDescription: "Interactive annual report"
 tags: ["Web Development"]
 thumbnailImg:
-  fileName: "progressive-screenshot.png"
+  fileName: "progressive-screenshot.jpg"
   alt: "Progressive interactive annual report screenshot"
 
 ---
