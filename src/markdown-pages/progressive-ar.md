@@ -13,7 +13,7 @@ thumbnailImg:
 
 ## About the Project
 
-Every year, the CEO of Progressive selects a theme for the annual report, and an artist is commissioned to create a body of work based on that theme. [Nesnadny + Schwartz](https://nsideas.com) then, designs and develops the annual report both as a printed piece and an online experience.
+Every year, the CEO of Progressive selects a theme for the annual report, and an artist is commissioned to create a body of work based on that theme. Nesnadny + Schwartz then, designs and develops the annual report both as a printed piece and an online experience.
 
 The theme for the 2019 annual report was “Together” and it showcased the work of multiple artists. My role was to lead the development of the website.
 
