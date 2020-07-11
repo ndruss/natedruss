@@ -6,8 +6,8 @@ description: "A front-end development guide for the Fairport Wealth website"
 shortDescription: "A detailed front-end development guide"
 tags: ["Front-End Architecture", "Documentation"]
 thumbnailImg:
-  fileName: "cru-screenshot.png"
-  alt: "Cru Uncorked website screenshot"
+  fileName: "fairport-screenshot.jpg"
+  alt: "Fairport Wealth website screenshot"
 ---
 
 ## About the Project
