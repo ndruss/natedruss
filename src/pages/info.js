@@ -9,7 +9,7 @@ export default () => (
       <h1 className="page-title">About Me</h1>
       <div className="body-text">
         <p>
-          My name is Nate Druss and I work as a Designer/Developer at <a className="nowrap" href="https://nsideas.com">Nesnadny + Schwartz</a>. My passion is at the intersection of creativity and technology. If you would like to get in touch, please send me email at <a href="mailto:nhdruss@gmail.com">nhdruss@gmail.com</a>.
+          My name is Nate Druss and I’m a designer/developer at <a className="nowrap" href="https://nsideas.com">Nesnadny + Schwartz</a>. I enjoy crafting user-focused, digital experiences and bridging the gap between design and development. If you’d like to get in touch, send me email at <a href="mailto:nhdruss@gmail.com">nhdruss@gmail.com</a>.
         </p>
       </div>
     </div>
