@@ -1,13 +1,9 @@
-// ProjectLink
-
 import React from 'react'
+import { Link } from 'gatsby'
 import styles from './project-link.module.scss'
 
-export default props => {
-  const project = props.post.frontmatter
-  return (
-    <a className={styles.link} href={`/work/${project.slug}`}>
-      <div className={styles.inner}>{props.children}</div>
-    </a>
-  )
-}
+export default ({ post, children }) => (
+  <Link className={styles.link} to={`/work/${post.frontmatter.slug}`}>
+    <div className={styles.inner}>{children}</div>
+  </Link>
+)
