@@ -1,11 +1,9 @@
-// ProjectList
-
 import React from 'react'
 import ProjectLink from '../project-link'
 import Thumbnail from '../thumbnail'
 import styles from './project-list.module.scss'
 
-export default ({ data }) => (
+const ProjectList = ({ data }) => (
   <ul className={styles.list}>
     {data.map(edge => (
       <li key={edge.node.id} className={styles.listItem}>
@@ -18,3 +16,5 @@ export default ({ data }) => (
     ))}
   </ul>
 )
+
+export default ProjectList

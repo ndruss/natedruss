@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
-export default () => (
+const InfoPage = () => (
   <Layout className="page-info">
     <Head title="Info" />
     <div className="container">
@@ -21,3 +21,5 @@ export default () => (
     </div>
   </Layout>
 )
+
+export default InfoPage

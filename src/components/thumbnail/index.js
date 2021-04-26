@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { useStaticQuery } from 'gatsby'
 
-export default function Thumbnail(props) {
+const Thumbnail = props => {
   const imgData = useStaticQuery(graphql`
     {
       allFile(filter: { sourceInstanceName: { eq: "images" } }) {
@@ -50,3 +50,5 @@ export default function Thumbnail(props) {
 
   return null
 }
+
+export default Thumbnail

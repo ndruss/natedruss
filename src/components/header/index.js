@@ -4,7 +4,7 @@ import { homeLinkClick, hashLinkClick } from '../../utils'
 import styles from './header.module.scss'
 import Logo from '../../images/svg/nate-druss-logo.svg'
 
-export default () => (
+const Header = () => (
   <header className={styles.header}>
     <div className="container container--full">
       <div className={styles.logo}>
@@ -28,3 +28,5 @@ export default () => (
     </div>
   </header>
 )
+
+export default Header

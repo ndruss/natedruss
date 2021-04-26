@@ -6,7 +6,7 @@ const siteDescription = 'A designer/developer in Cleveland, Ohio.'
 const fontUrl =
   'https://fonts.googleapis.com/css?family=Source+Code+Pro:300,300i,500,500i,600,600i&display=swap'
 
-export default props => (
+const Head = props => (
   <Helmet>
     <title>Nate Druss{props.title ? ' | ' + props.title : ''}</title>
     <meta
@@ -24,3 +24,5 @@ export default props => (
     <link href={fontUrl} rel="stylesheet" />
   </Helmet>
 )
+
+export default Head

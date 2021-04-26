@@ -5,7 +5,7 @@ import IconEmail from '../../images/svg/email-icon.svg'
 import IconLinkedIn from '../../images/svg/linkedin-icon.svg'
 import IconCodePen from '../../images/svg/codepen-icon.svg'
 
-export default () => (
+const Footer = () => (
   <footer className={styles.footer}>
     <div className={`container--full ${styles.container}`}>
       <div className={styles.column}>
@@ -39,3 +39,5 @@ export default () => (
     </div>
   </footer>
 )
+
+export default Footer

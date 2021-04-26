@@ -7,7 +7,7 @@ import TagList from '../../components/tag-list'
 import ProjectLink from '../../components/project-link'
 import styles from './project.module.scss'
 
-export default function Template({ data }) {
+const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { allMarkdownRemark } = data
@@ -47,6 +47,8 @@ export default function Template({ data }) {
     </Layout>
   )
 }
+
+export default ProjectTemplate
 
 export const pageQuery = graphql`
   query($slug: String!) {

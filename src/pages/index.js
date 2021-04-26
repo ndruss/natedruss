@@ -7,21 +7,19 @@ import Head from '../components/head'
 import Intro from '../components/site-intro'
 import ProjectList from '../components/project-list'
 
-export default ({ data }) => {
-  const { allMarkdownRemark } = data
-  const { edges } = allMarkdownRemark
-  return (
-    <>
-      <Head />
-      <Intro />
-      <Layout className="page-index">
-        <div id="work" className="container">
-          <ProjectList data={edges} />
-        </div>
-      </Layout>
-    </>
-  )
-}
+const HomePage = ({ data }) => (
+  <div>
+    <Head />
+    <Intro />
+    <Layout className="page-index">
+      <div id="work" className="container">
+        <ProjectList data={data.allMarkdownRemark.edges} />
+      </div>
+    </Layout>
+  </div>
+)
+
+export default HomePage
 
 export const pageQuery = graphql`
   query {

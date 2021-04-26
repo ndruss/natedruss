@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
-export default () => (
+const NotFoundPage = () => (
   <Layout className="page-404">
     <Head title="Page Not Found" />
     <div className="container">
@@ -16,3 +16,5 @@ export default () => (
     </div>
   </Layout>
 )
+
+export default NotFoundPage

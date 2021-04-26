@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './site-intro.module.scss'
 
-export default () => (
+const SiteIntro = () => (
   <section className={styles.intro}>
     <header className="container container--wide">
       <div className={styles.textBlock}>
@@ -11,3 +11,5 @@ export default () => (
     </header>
   </section>
 )
+
+export default SiteIntro
