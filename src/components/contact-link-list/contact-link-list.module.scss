@@ -1,0 +1,32 @@
+
+.list {
+  padding: 1em 0;
+  list-style-type: none;
+  @media (min-width: 760px) {
+    text-align: right;
+  }
+}
+
+.list > li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: solid 1px var(--color-gray);
+  border-radius: 50%;
+  &:hover {
+    background: transparent;
+    border-color: var(--color-blue);
+  }
+}
+
+.iconLink path {
+  fill: var(--color-blue);
+}
