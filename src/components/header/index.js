@@ -1,27 +1,26 @@
-import React from "react"
-import { Link } from "gatsby"
-import styles from "./header.module.scss"
-import Logo from "../../images/svg/nate-druss-logo.svg"
+import React from 'react'
+import { Link } from 'gatsby'
+import styles from './header.module.scss'
+import Logo from '../../images/svg/nate-druss-logo.svg'
 
 const ListLink = props => {
   const handleClick = e => {
     e.preventDefault()
 
     if (e.target.hash && document.querySelector(e.target.hash)) {
-
       if (!window.location.hash) {
-        window.history.pushState({ content: "work" }, "", e.target.hash)
+        window.history.pushState({ content: 'work' }, '', e.target.hash)
       }
 
-      document.querySelector(e.target.hash)
-      .scrollIntoView({ behavior: "smooth" })
-
+      document
+        .querySelector(e.target.hash)
+        .scrollIntoView({ behavior: 'smooth' })
     } else {
       window.location = e.target.href
     }
   }
 
-  return(
+  return (
     <li className={styles.listItem}>
       <Link onClick={handleClick} to={props.to}>
         {props.children}

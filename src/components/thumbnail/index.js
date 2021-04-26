@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { useStaticQuery } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
+import { useStaticQuery } from 'gatsby'
 
 export default function Thumbnail(props) {
-  const imgData = useStaticQuery(graphql `
+  const imgData = useStaticQuery(graphql`
     {
       allFile(filter: { sourceInstanceName: { eq: "images" } }) {
         edges {
@@ -18,34 +18,34 @@ export default function Thumbnail(props) {
     }
   `)
 
-  const post = props.frontmatter;
-  
-  if (post.thumbnailImg) {
-    const path = post.slug + "/" + post.thumbnailImg.fileName
+  const post = props.frontmatter
 
-    const image = imgData.allFile.edges
-    .find(file => file.node.relativePath === path)
+  if (post.thumbnailImg) {
+    const path = post.slug + '/' + post.thumbnailImg.fileName
+
+    const image = imgData.allFile.edges.find(
+      file => file.node.relativePath === path
+    )
 
     if (image) {
+      const highRes = imgData.allFile.edges.find(
+        file => file.node.name === image.node.name + '@2x'
+      )
 
-      const highRes = imgData.allFile.edges
-      .find(file => file.node.name === image.node.name + "@2x")
-
-      let srcSet = image.node.publicURL + " 1x"
-      if (highRes){
+      let srcSet = image.node.publicURL + ' 1x'
+      if (highRes) {
         srcSet += `, ${highRes.node.publicURL} 2x`
       }
 
       return (
         <img
-          className={props.className ? props.className : "thumbnail"}
+          className={props.className ? props.className : 'thumbnail'}
           srcSet={srcSet}
           src={image.node.publicURL}
           alt={post.thumbnailImg.alt}
         />
       )
-
-    }  
+    }
   }
 
   return null

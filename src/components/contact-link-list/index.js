@@ -1,5 +1,5 @@
-import React from "react"
-import styles from "./contact-link-list.module.scss"
+import React from 'react'
+import styles from './contact-link-list.module.scss'
 
 const ContactLinkList = ({ links }) => (
   <ul className={styles.list}>
@@ -11,7 +11,7 @@ const ContactLinkList = ({ links }) => (
         </a>
       </li>
     ))}
-  </ul>    
+  </ul>
 )
 
 export default ContactLinkList

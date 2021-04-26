@@ -1,9 +1,9 @@
 // ProjectList
 
-import React from "react"
-import ProjectLink from "../project-link";
-import Thumbnail from "../thumbnail"
-import styles from "./project-list.module.scss"
+import React from 'react'
+import ProjectLink from '../project-link'
+import Thumbnail from '../thumbnail'
+import styles from './project-list.module.scss'
 
 export default ({ data }) => (
   <ul className={styles.list}>

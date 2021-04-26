@@ -1,14 +1,18 @@
-import React from "react"
-import { Helmet } from "react-helmet"
+import React from 'react'
+import { Helmet } from 'react-helmet'
 
-const siteDescription = "A designer/developer in Cleveland, Ohio.";
+const siteDescription = 'A designer/developer in Cleveland, Ohio.'
 
-const fontUrl = "https://fonts.googleapis.com/css?family=Source+Code+Pro:300,300i,500,500i,600,600i&display=swap";
+const fontUrl =
+  'https://fonts.googleapis.com/css?family=Source+Code+Pro:300,300i,500,500i,600,600i&display=swap'
 
 export default props => (
   <Helmet>
     <title>Nate Druss{props.title ? ' | ' + props.title : ''}</title>
-    <meta name="description" content={props.description ? props.description : siteDescription} />
+    <meta
+      name="description"
+      content={props.description ? props.description : siteDescription}
+    />
     <link rel="canonical" href="https://natedruss.com" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

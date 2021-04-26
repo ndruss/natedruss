@@ -29,9 +29,9 @@ module.exports = {
       resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
-          include: /\.svg$/
-        }
-      }
+          include: /\.svg$/,
+        },
+      },
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-172471674-1",
+        trackingId: 'UA-172471674-1',
       },
     },
   ],

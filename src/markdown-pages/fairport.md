@@ -1,13 +1,13 @@
 ---
-slug: "fairport"
-date: "2019-01-01"
-title: "Fairport Wealth"
-description: "A front-end development guide for the Fairport Wealth website"
-shortDescription: "A detailed front-end development guide"
-tags: ["Front-End Architecture", "Documentation"]
+slug: 'fairport'
+date: '2019-01-01'
+title: 'Fairport Wealth'
+description: 'A front-end development guide for the Fairport Wealth website'
+shortDescription: 'A detailed front-end development guide'
+tags: ['Front-End Architecture', 'Documentation']
 thumbnailImg:
-  fileName: "fairport-screenshot.jpg"
-  alt: "Fairport Wealth website screenshot"
+  fileName: 'fairport-screenshot.jpg'
+  alt: 'Fairport Wealth website screenshot'
 ---
 
 ## About the Project

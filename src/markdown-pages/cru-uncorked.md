@@ -1,13 +1,13 @@
 ---
-slug: "cru-uncorked"
-date: "2019-05-04"
-title: "Cru Uncorked"
-description: "Website for a French fine dining restaurant"
-shortDescription: "Website for a French fine dining restaurant"
-tags: ["UI Design", "Web Development"]
+slug: 'cru-uncorked'
+date: '2019-05-04'
+title: 'Cru Uncorked'
+description: 'Website for a French fine dining restaurant'
+shortDescription: 'Website for a French fine dining restaurant'
+tags: ['UI Design', 'Web Development']
 thumbnailImg:
-  fileName: "cru-screenshot.jpg"
-  alt: "Cru Uncorked website screenshot"
+  fileName: 'cru-screenshot.jpg'
+  alt: 'Cru Uncorked website screenshot'
 ---
 
 ## About the Project

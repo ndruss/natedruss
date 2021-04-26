@@ -1,5 +1,5 @@
-import React from "react"
-import styles from "./site-intro.module.scss"
+import React from 'react'
+import styles from './site-intro.module.scss'
 
 export default () => (
   <section className={styles.intro}>

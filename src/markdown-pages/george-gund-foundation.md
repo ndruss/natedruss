@@ -1,13 +1,13 @@
 ---
-slug: "george-gund-foundation"
-date: "2020-05-17"
-title: "George Gund Foundation"
-description: "A set of adaptable themes for the George Gund Foundation’s WordPress site"
-shortDescription: "WordPress theme family"
-tags: ["WordPress Theme Development"]
+slug: 'george-gund-foundation'
+date: '2020-05-17'
+title: 'George Gund Foundation'
+description: 'A set of adaptable themes for the George Gund Foundation’s WordPress site'
+shortDescription: 'WordPress theme family'
+tags: ['WordPress Theme Development']
 thumbnailImg:
-  fileName: "gund-foundation-screenshot.jpg"
-  alt: "George Gund Foundation website screenshot"
+  fileName: 'gund-foundation-screenshot.jpg'
+  alt: 'George Gund Foundation website screenshot'
 ---
 
 ## About the Project

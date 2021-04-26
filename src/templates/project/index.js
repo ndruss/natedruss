@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../../components/layout"
-import Head from "../../components/head"
-import Thumbnail from "../../components/thumbnail"
-import TagList from "../../components/tag-list"
-import ProjectLink from "../../components/project-link";
-import styles from "./project.module.scss"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../../components/layout'
+import Head from '../../components/head'
+import Thumbnail from '../../components/thumbnail'
+import TagList from '../../components/tag-list'
+import ProjectLink from '../../components/project-link'
+import styles from './project.module.scss'
 
 export default function Template({ data }) {
   const { markdownRemark } = data
@@ -18,18 +18,14 @@ export default function Template({ data }) {
     <Layout className={`page-${frontmatter.slug}`}>
       <Head title={frontmatter.title} />
       <article className={styles.article}>
-
         <header className={`container ${styles.header}`}>
           <h1 className="page-title">{frontmatter.title}</h1>
           <p className={styles.description}>{frontmatter.description}</p>
-          <TagList tags={frontmatter.tags}/>
+          <TagList tags={frontmatter.tags} />
         </header>
 
         <div className="container--wide">
-          <Thumbnail
-            frontmatter={frontmatter}
-            className={styles.thumbnail}
-          />
+          <Thumbnail frontmatter={frontmatter} className={styles.thumbnail} />
         </div>
 
         <div className="container">
@@ -47,9 +43,7 @@ export default function Template({ data }) {
             </ProjectLink>
           </div>
         </footer>
-
       </article>
-
     </Layout>
   )
 }
@@ -90,8 +84,9 @@ export const pageQuery = graphql`
 function getNextProject(allMarkdownRemark, frontmatter) {
   const allProjects = allMarkdownRemark.edges
 
-  const thisNode = allProjects
-  .find(edge => edge.node.frontmatter.slug === frontmatter.slug)
+  const thisNode = allProjects.find(
+    edge => edge.node.frontmatter.slug === frontmatter.slug
+  )
 
   const position = allProjects.indexOf(thisNode)
 
@@ -101,4 +96,3 @@ function getNextProject(allMarkdownRemark, frontmatter) {
 
   return allProjects[position + 1].node
 }
-
