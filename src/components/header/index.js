@@ -10,7 +10,7 @@ const ListLink = props => {
     if (e.target.hash && document.querySelector(e.target.hash)) {
 
       if (!window.location.hash) {
-        window.history.pushState({content: "work"}, "", e.target.hash)
+        window.history.pushState({ content: "work" }, "", e.target.hash)
       }
 
       document.querySelector(e.target.hash)

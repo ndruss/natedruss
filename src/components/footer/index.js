@@ -28,7 +28,7 @@ export default () => (
           <ListLinkContact url="mailto:nhdruss@gmail.com" name="Email">
             <IconEmail />
           </ListLinkContact>
-          <ListLinkContact url="https://www.linkedin.com/in/nate-druss-59b6321a7/" name="LinkedIn">
+          <ListLinkContact url="https://www.linkedin.com/in/nate-druss/" name="LinkedIn">
             <IconLinkedIn />
           </ListLinkContact>
           <ListLinkContact url="https://codepen.io/nate_druss" name="CodePen">
