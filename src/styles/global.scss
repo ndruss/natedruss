@@ -6,7 +6,7 @@
   --color-gray-dark: #1c1d1f;
   --color-background: var(--color-gray-dark);
   --color-foreground: var(--color-gray-extralight);
- 
+
   --header-height: 50px;
   --footer-height: 200px;
 }
@@ -42,7 +42,7 @@ body {
 
 .container,
 .container--wide,
-.container--full  {
+.container--full {
   @include container;
 }
 
@@ -118,9 +118,7 @@ h4 {
 }
 
 .main-content {
-  min-height: calc(
-    100vh - var(--header-height) - var(--footer-height)
-  );
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
   padding-bottom: 3em;
 }
 
