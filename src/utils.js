@@ -30,3 +30,19 @@ export const hashLinkClick = e => {
   }
   window.history.pushState({ content: e.target.hash }, '', e.target.hash)
 }
+
+export const getNextProject = (allMarkdownRemark, frontmatter) => {
+  const allProjects = allMarkdownRemark.edges
+
+  const thisNode = allProjects.find(
+    edge => edge.node.frontmatter.slug === frontmatter.slug
+  )
+
+  const position = allProjects.indexOf(thisNode)
+
+  if (position === allProjects.length - 1) {
+    return allProjects[0].node
+  }
+
+  return allProjects[position + 1].node
+}
