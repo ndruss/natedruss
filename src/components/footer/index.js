@@ -1,21 +1,21 @@
 import React from 'react'
-import styles from './footer.module.scss'
 import ContactLinkList from '../contact-link-list'
 import IconEmail from '../../images/svg/email-icon.svg'
 import IconLinkedIn from '../../images/svg/linkedin-icon.svg'
 import IconCodePen from '../../images/svg/codepen-icon.svg'
+import { footer, container, column } from './footer.module.scss'
 
 const Footer = () => (
-  <footer className={styles.footer}>
-    <div className={`container--full ${styles.container}`}>
-      <div className={styles.column}>
+  <footer className={footer}>
+    <div className={`container--full ${container}`}>
+      <div className={column}>
         <p>
           Nate Druss
           <br />
           Designer/Developer – Cleveland, OH
         </p>
       </div>
-      <div className={styles.column}>
+      <div className={column}>
         <ContactLinkList
           links={[
             {

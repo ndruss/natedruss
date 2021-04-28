@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './site-intro.module.scss'
+import { intro, textBlock } from './site-intro.module.scss'
 
 const SiteIntro = () => (
-  <section className={styles.intro}>
+  <section className={intro}>
     <header className="container container--wide">
-      <div className={styles.textBlock}>
+      <div className={textBlock}>
         <h1>Hi, I’m Nate</h1>
         <h2>a designer/developer in Cleveland,&nbsp;Ohio.</h2>
       </div>

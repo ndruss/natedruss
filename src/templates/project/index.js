@@ -6,7 +6,13 @@ import Head from '../../components/head'
 import Thumbnail from '../../components/thumbnail'
 import TagList from '../../components/tag-list'
 import ProjectLink from '../../components/project-link'
-import styles from './project.module.scss'
+import {
+  header,
+  description,
+  thumbnail,
+  content,
+  nextProjectLink,
+} from './project.module.scss'
 
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data
@@ -18,26 +24,26 @@ const ProjectTemplate = ({ data }) => {
   return (
     <Layout className={`page-${frontmatter.slug}`}>
       <Head title={frontmatter.title} />
-      <article className={styles.article}>
-        <header className={`container ${styles.header}`}>
+      <article>
+        <header className={`container ${header}`}>
           <h1 className="page-title">{frontmatter.title}</h1>
-          <p className={styles.description}>{frontmatter.description}</p>
+          <p className={description}>{frontmatter.description}</p>
           <TagList tags={frontmatter.tags} />
         </header>
 
         <div className="container--wide">
-          <Thumbnail frontmatter={frontmatter} className={styles.thumbnail} />
+          <Thumbnail frontmatter={frontmatter} className={thumbnail} />
         </div>
 
         <div className="container">
           <div
-            className={`body-text ${styles.content}`}
+            className={`body-text ${content}`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
 
         <footer className="container flex-center">
-          <div className={styles.nextProjectLink}>
+          <div className={nextProjectLink}>
             <ProjectLink post={nextProject}>
               <h4>Next Project</h4>
               <h2>{nextProject.frontmatter.title}</h2>
