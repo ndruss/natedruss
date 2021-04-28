@@ -14,10 +14,12 @@ import {
   nextProjectLink,
 } from './project.module.scss'
 
-const ProjectTemplate = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
-  const { allMarkdownRemark } = data
+const ProjectTemplate = ({
+  data: {
+    markdownRemark: { frontmatter, html },
+    allMarkdownRemark,
+  },
+}) => {
   const nextProject = getNextProject(allMarkdownRemark, frontmatter)
 
   return (

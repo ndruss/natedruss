@@ -5,13 +5,17 @@ import Head from '../components/head'
 import Intro from '../components/site-intro'
 import ProjectList from '../components/project-list'
 
-const HomePage = ({ data }) => (
+const HomePage = ({ data: { allMarkdownRemark } }) => (
   <div>
     <Head />
     <Intro />
     <Layout className="page-index">
       <div id="work" className="container">
-        <ProjectList data={data.allMarkdownRemark.edges} />
+        <ProjectList
+          projects={allMarkdownRemark.edges.filter(
+            edge => edge.node.parent.relativeDirectory === 'work'
+          )}
+        />
       </div>
     </Layout>
   </div>
@@ -36,6 +40,11 @@ export const pageQuery = graphql`
             thumbnailImg {
               fileName
               alt
+            }
+          }
+          parent {
+            ... on File {
+              relativeDirectory
             }
           }
         }
