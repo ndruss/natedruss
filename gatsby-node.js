@@ -1,8 +1,6 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const projectTemplate = require.resolve(`./src/templates/project`)
-
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -13,6 +11,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               slug
+            }
+            parent {
+              ... on File {
+                relativeDirectory
+              }
             }
           }
         }
@@ -26,14 +29,32 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const templates = {
+    _standard: 'standard',
+    work: 'project',
+  }
+
+  const {
+    data: {
+      allMarkdownRemark: { edges: markdownPages },
+    },
+  } = result
+
+  markdownPages.forEach(({ node }) => {
+    const {
+      frontmatter: { slug },
+      parent: { relativeDirectory: dir },
+    } = node
+
+    const path = dir === '_standard' ? `/${slug}` : `/${dir}/${slug}`
+
     createPage({
-      path: `/work/${node.frontmatter.slug}`,
-      component: projectTemplate,
+      path,
+      component: require.resolve(`./src/templates/${templates[dir]}`),
       context: {
         // additional data can be passed via context
-        slug: node.frontmatter.slug,
-        relativePath: `/work/${node.frontmatter.slug}`,
+        slug,
+        relativePath: path,
       },
     })
   })

@@ -18,7 +18,6 @@ const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { allMarkdownRemark } = data
-
   const nextProject = getNextProject(allMarkdownRemark, frontmatter)
 
   return (
