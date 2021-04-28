@@ -32,13 +32,15 @@ const ProjectTemplate = ({
           <TagList tags={frontmatter.tags} />
         </header>
 
-        <div className="container--wide">
-          <Thumbnail
-            frontmatter={frontmatter}
-            className={thumbnail}
-            loading="eager"
-          />
-        </div>
+        {frontmatter.thumbnailImg && (
+          <div className="container--wide">
+            <Thumbnail
+              frontmatter={frontmatter}
+              className={thumbnail}
+              loading="eager"
+            />
+          </div>
+        )}
 
         <div className="container">
           <div
@@ -78,7 +80,7 @@ export const pageQuery = graphql`
               gatsbyImageData(
                 layout: FULL_WIDTH
                 placeholder: BLURRED
-                quality: 75
+                quality: 100
               )
             }
           }
@@ -88,6 +90,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/(work)/" } }
       limit: 1000
     ) {
       edges {

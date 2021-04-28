@@ -11,11 +11,7 @@ const HomePage = ({ data: { allMarkdownRemark } }) => (
     <Intro />
     <Layout className="page-index">
       <div id="work" className="container">
-        <ProjectList
-          projects={allMarkdownRemark.edges.filter(
-            edge => edge.node.parent.relativeDirectory === 'work'
-          )}
-        />
+        <ProjectList projects={allMarkdownRemark.edges} />
       </div>
     </Layout>
   </div>
@@ -27,6 +23,7 @@ export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/(work)/" } }
       limit: 1000
     ) {
       edges {
@@ -43,16 +40,11 @@ export const pageQuery = graphql`
                   gatsbyImageData(
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    quality: 75
+                    quality: 100
                   )
                 }
               }
               alt
-            }
-          }
-          parent {
-            ... on File {
-              relativeDirectory
             }
           }
         }

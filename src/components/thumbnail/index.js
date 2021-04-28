@@ -6,18 +6,15 @@ const Thumbnail = ({
   className = 'thumbnail',
   loading = 'lazy',
 }) => {
-  if (thumbnailImg) {
-    const image = getImage(thumbnailImg.src)
-    return (
-      <GatsbyImage
-        className={className}
-        image={image}
-        alt={thumbnailImg.alt}
-        loading={loading}
-      />
-    )
-  }
-  return null
+  const image = getImage(thumbnailImg.src)
+  return (
+    <GatsbyImage
+      className={className}
+      image={image}
+      alt={thumbnailImg.alt}
+      loading={loading}
+    />
+  )
 }
 
 export default Thumbnail
