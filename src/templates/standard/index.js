@@ -24,15 +24,8 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         slug
         title
-        tags
-        description
-        thumbnailImg {
-          fileName
-          alt
-        }
       }
     }
   }

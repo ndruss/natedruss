@@ -33,7 +33,11 @@ const ProjectTemplate = ({
         </header>
 
         <div className="container--wide">
-          <Thumbnail frontmatter={frontmatter} className={thumbnail} />
+          <Thumbnail
+            frontmatter={frontmatter}
+            className={thumbnail}
+            loading="eager"
+          />
         </div>
 
         <div className="container">
@@ -69,7 +73,15 @@ export const pageQuery = graphql`
         tags
         description
         thumbnailImg {
-          fileName
+          src {
+            childImageSharp {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                quality: 75
+              )
+            }
+          }
           alt
         }
       }

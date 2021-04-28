@@ -38,7 +38,15 @@ export const pageQuery = graphql`
             slug
             shortDescription
             thumbnailImg {
-              fileName
+              src {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    quality: 75
+                  )
+                }
+              }
               alt
             }
           }

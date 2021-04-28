@@ -6,7 +6,7 @@ const SiteIntro = () => (
     <header className="container container--wide">
       <div className={textBlock}>
         <h1>Hi, I’m Nate</h1>
-        <h2>a designer/developer in Cleveland,&nbsp;Ohio.</h2>
+        <h2>a Front-End Developer in Cleveland,&nbsp;Ohio.</h2>
       </div>
     </header>
   </section>

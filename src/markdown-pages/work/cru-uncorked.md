@@ -6,7 +6,7 @@ description: 'Website for a French fine dining restaurant'
 shortDescription: 'Website for a French fine dining restaurant'
 tags: ['UI Design', 'Web Development']
 thumbnailImg:
-  fileName: 'cru-screenshot.jpg'
+  src: '../../images/cru-uncorked/cru-screenshot.jpg'
   alt: 'Cru Uncorked website screenshot'
 ---
 
