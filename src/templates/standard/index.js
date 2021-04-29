@@ -1,15 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from 'components/layout'
-import Head from 'components/head'
 
 const StandardPageTemplate = ({
   data: {
     markdownRemark: { frontmatter, html },
   },
 }) => (
-  <Layout className={`page-${frontmatter.slug}`}>
-    <Head title={frontmatter.title} />
+  <Layout title={frontmatter.title} className={`page-${frontmatter.slug}`}>
     <div className="container">
       <h1 className="page-title">{frontmatter.title}</h1>
       <div className="body-text" dangerouslySetInnerHTML={{ __html: html }} />

@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { getNextProject } from 'utils'
 import Layout from 'components/layout'
-import Head from 'components/head'
 import Thumbnail from 'components/thumbnail'
 import TagList from 'components/tag-list'
 import ProjectLink from 'components/project-link'
@@ -23,8 +22,7 @@ const ProjectTemplate = ({
   const nextProject = getNextProject(allMarkdownRemark, frontmatter)
 
   return (
-    <Layout className={`page-${frontmatter.slug}`}>
-      <Head title={frontmatter.title} />
+    <Layout title={frontmatter.title} className={`page-${frontmatter.slug}`}>
       <article>
         <header className={`container ${header}`}>
           <h1 className="page-title">{frontmatter.title}</h1>

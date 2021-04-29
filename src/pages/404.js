@@ -1,10 +1,8 @@
 import React from 'react'
 import Layout from 'components/layout'
-import Head from 'components/head'
 
 const NotFoundPage = () => (
-  <Layout className="page-404">
-    <Head title="Page Not Found" />
+  <Layout title="Page Not Found" className="page-404">
     <div className="container">
       <h1 className="page-title">404</h1>
       <div className="body-text">

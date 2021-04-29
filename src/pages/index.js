@@ -1,13 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from 'components/layout'
-import Head from 'components/head'
 import Intro from 'components/site-intro'
 import ProjectList from 'components/project-list'
 
 const HomePage = ({ data: { allMarkdownRemark } }) => (
   <div>
-    <Head />
     <Intro />
     <Layout className="page-index">
       <div id="work" className="container">
