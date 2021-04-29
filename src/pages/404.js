@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Layout from 'components/layout'
 
 const NotFoundPage = () => (
@@ -8,7 +9,7 @@ const NotFoundPage = () => (
       <div className="body-text">
         <p>The page you are looking for does not exist.</p>
         <p>
-          <a href="/">Return to the homepage</a>
+          <Link to="/">Return to the homepage</Link>
         </p>
       </div>
     </div>
