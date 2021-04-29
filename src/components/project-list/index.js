@@ -1,6 +1,6 @@
 import React from 'react'
-import ProjectLink from '../project-link'
-import Thumbnail from '../thumbnail'
+import ProjectLink from 'components/project-link'
+import Thumbnail from 'components/thumbnail'
 import { list, linkTitle, linkSubtitle } from './project-list.module.scss'
 
 const ProjectList = ({ projects }) => (

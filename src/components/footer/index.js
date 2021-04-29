@@ -1,8 +1,8 @@
 import React from 'react'
-import ContactLinkList from '../contact-link-list'
-import IconEmail from '../../images/svg/email-icon.svg'
-import IconLinkedIn from '../../images/svg/linkedin-icon.svg'
-import IconCodePen from '../../images/svg/codepen-icon.svg'
+import ContactLinkList from 'components/contact-link-list'
+import IconEmail from 'images/svg/email-icon.svg'
+import IconLinkedIn from 'images/svg/linkedin-icon.svg'
+import IconCodePen from 'images/svg/codepen-icon.svg'
 import { footer, container, column } from './footer.module.scss'
 
 const Footer = () => (

@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { getNextProject } from '../../utils'
-import Layout from '../../components/layout'
-import Head from '../../components/head'
-import Thumbnail from '../../components/thumbnail'
-import TagList from '../../components/tag-list'
-import ProjectLink from '../../components/project-link'
+import { getNextProject } from 'utils'
+import Layout from 'components/layout'
+import Head from 'components/head'
+import Thumbnail from 'components/thumbnail'
+import TagList from 'components/tag-list'
+import ProjectLink from 'components/project-link'
 import {
   header,
   description,

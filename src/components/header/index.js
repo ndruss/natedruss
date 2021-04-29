@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { homeLinkClick, hashLinkClick } from '../../utils'
-import Logo from '../../images/svg/nate-druss-logo.svg'
+import { homeLinkClick, hashLinkClick } from 'utils'
+import Logo from 'images/svg/nate-druss-logo.svg'
 import { header, logo, list, listItem } from './header.module.scss'
 
 const Header = () => (
