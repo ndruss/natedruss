@@ -1,7 +1,10 @@
 ---
 slug: 'info'
-title: 'About Me'
+title: 'Info'
+description: 'Information about Nate Druss, Front-End Developer in Cleveland, Ohio'
 ---
+
+# About Me
 
 My name is Nate Druss and I’m a Front-End Developer at
 [Progressive](https://www.progressive.com/). I enjoy

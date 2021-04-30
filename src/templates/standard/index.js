@@ -4,12 +4,14 @@ import Layout from 'components/layout'
 
 const StandardPageTemplate = ({
   data: {
-    markdownRemark: { frontmatter, html },
+    markdownRemark: {
+      frontmatter: { slug, title, description },
+      html,
+    },
   },
 }) => (
-  <Layout title={frontmatter.title} className={`page-${frontmatter.slug}`}>
+  <Layout title={title} description={description} className={`page-${slug}`}>
     <div className="container">
-      <h1 className="page-title">{frontmatter.title}</h1>
       <div className="body-text" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   </Layout>
@@ -24,6 +26,7 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         title
+        description
       }
     }
   }
