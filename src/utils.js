@@ -46,3 +46,13 @@ export const getNextProject = (allMarkdownRemark, frontmatter) => {
 
   return allProjects[position + 1].node
 }
+
+export const getMetaImage = srcset => {
+  const images = srcset.split(',')
+  for (const img of images) {
+    const width = parseInt(img.split(' ')[1].split('w')[0])
+    if (width > 1199 && width < 1500) {
+      return img.split(' ')[0].trim()
+    }
+  }
+}

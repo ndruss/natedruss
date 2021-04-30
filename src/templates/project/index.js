@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { getNextProject } from 'utils'
+import { getSrcSet } from 'gatsby-plugin-image'
+import { getMetaImage, getNextProject } from 'utils'
 import Layout from 'components/layout'
 import Thumbnail from 'components/thumbnail'
 import TagList from 'components/tag-list'
@@ -20,9 +21,16 @@ const ProjectTemplate = ({
   },
 }) => {
   const nextProject = getNextProject(allMarkdownRemark, frontmatter)
+  const thumbnailSrcSet = getSrcSet(frontmatter.thumbnailImg.src)
+  const metaImage = getMetaImage(thumbnailSrcSet)
 
   return (
-    <Layout title={frontmatter.title} className={`page-${frontmatter.slug}`}>
+    <Layout
+      title={frontmatter.title}
+      description={frontmatter.description}
+      image={metaImage}
+      className={`page-${frontmatter.slug}`}
+    >
       <article>
         <header className={`container ${header}`}>
           <h1 className="page-title">{frontmatter.title}</h1>
