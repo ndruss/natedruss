@@ -12,7 +12,7 @@ const Footer = () => (
         <p>
           Nate Druss
           <br />
-          Designer/Developer – Cleveland, OH
+          Front-End Developer – Cleveland, OH
         </p>
       </div>
       <div className={column}>
